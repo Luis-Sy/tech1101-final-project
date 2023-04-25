@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Home</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="css/javasheet.css">
+</head>
+<body>
+	<!-- navbar -->
+	<div id="navbar">
+		<div id="navbarElement" class="home" onclick="document.location='index.html'">Home</div>
+		<div id="navbarElement" class="html" onclick="document.location='cheatsheet.html'">HTML Cheatsheet</div>
+		<div id="navbarElement" class="css" onclick="document.location='css.html'">CSS Cheatsheet</div>
+		<div id="navbarElement" class="java" onclick="document.location='java.html'">Javascript Cheatsheet</div>
+	</div>
+	<!-- main page content -->
+	<div id="mainBody">
+		<div>
+			<h1 id="sectionHeader">Javascript Snippets</h1>
+			<br>
+			<!-- Commands -->
+			<h2 id="sectionSubHeader">Commands to Retreive Elements From the Page</h2>
+			<p>document.GetElementById("insert id here")<br>
+				(Searches for the first element with the specified ID in the parentheses, returns NULL if nothing is found.)
+			</p>
+			<br>
+			<p>document.GetElementByClass("insert class here")<br>
+				(Searches for the first element with the specified class in the parentheses, returns NULL if nothing is found.)
+			</p>
+			<br>
+			<h2 id="sectionSubHeader">Common Commands</h2>
+			<p>innerHTML()<br>
+				Returns all text and tags contained in an element
+			</p>
+			<br>
+			<p>innerText()<br>
+				Only returns all text contained in an element
+			</p>
+			<br>
+			<p>appendChild(child)<br>
+				Adds the element passed into the function as a child to another element
+			</p>
+			<br>
+			<p>removeChild(child)<br>
+				Removes the first child of an element by default, if a child is passed in the function, remove the first instance found
+			</p>
+			<br>
+			<p>createElement("tag")<br>
+				Creates a new element of the tag specified in the function
+			</p>
+			<br>
+			<!-- code examples -->
+			<h2 id="sectionSubHeader">Code Examples</h2>
+			<div>
+				<p>Clickable Button Div that adds text to the page</p><br>
+				<div style="margin: 10px; padding: 10px; background-color: gray; color: white; overflow: hidden;">
+					<p>function sayHello(){ // appends 'hello world' to the document<br>
+					document.getElementById("helloExample").innerHTML += "hello world ";<br>
+					}</p>
+				</div>
+				<br>
+				<!-- button and text append example -->
+				<div style="height: 25px; width: 100px; padding: 10px; margin: 10px; border: solid black 2px; background-color: cyan; text-align: center; user-select: none" onclick="sayHello()">Click Me</div>
+				<div id="helloExample" style="padding: 4px; border: solid black 2px; font-size: 1.25em;"></div> <!-- div to add text to -->
+			</div>
+			<br>
+			<div>
+			<!-- create element and append example -->
+				<p>Clickable Button Div that adds a new element to the page</p><br>
+				<div style="margin: 10px; padding: 10px; background-color: gray; color: white; overflow: hidden;">
+					<p>function createTag(){<br>
+					let div = document.getElementById("createExample");<br>
+					let element = document.createElement("b");<br>
+					element.innerHTML = "This is a newly created bold element via Javascript";<br>
+					div.appendChild(element);<br>
+					}</p>
+				</div>
+				<div style="height: 25px; width: 100px; padding: 10px; margin: 10px; border: solid black 2px; background-color: cyan; text-align: center; user-select: none" onclick="createTag()">Click Me</div>
+				<div id="createExample" style="padding: 4px; border: solid black 2px; font-size: 1.25em;"></div> <!-- div to add element to -->
+			</div>
+			<br>
+			<!-- get current date and time example -->
+			<p>Clickable Button Div that get the current time and displays it on the page</p><br>
+				<div style="margin: 10px; padding: 10px; background-color: gray; color: white; overflow: hidden;">
+					<p>function displayTime(){<br>
+					// display date and time<br>
+					let date = new Date();<br>
+					const options = {year: 'numeric',month: 'long',day: 'numeric'};<br>
+					document.getElementById("date").innerHTML = "Date: " + date.toLocaleString('en-CA', options);<br>
+					document.getElementById("time").innerHTML = "Time: " + date.toLocaleTimeString().slice(0,4) + date.toLocaleTimeString().slice(7);<br>
+					}</p>
+				</div>
+				<div style="height: 25px; width: 100px; padding: 10px; margin: 10px; border: solid black 2px; background-color: cyan; text-align: center; user-select: none; font-size: 1.25em;" onclick="displayTime()">Click Me</div>
+				<div id="createExample" style="padding: 4px; border: solid black 2px;">
+					<p id="date"></p>
+					<p id="time"></p>
+				</div>
+				<br>
+				
+			</div>
+			<!-- links -->
+			<div>
+				<h1 id="sectionHeader">Useful Links</h1>
+				<p>W3Schools Javascript Reference: <a href="https://www.w3schools.com/jsref/default.asp">https://www.w3schools.com/jsref/default.asp</a></p>
+				<p>MDN Javascript Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a></p>
+				<p><a href=""></a></p>
+			</div>
+			
+		</div>
+		
+		
+	
+	</div>
+	
+</body>
+<script src="script.js"></script>
+</html>

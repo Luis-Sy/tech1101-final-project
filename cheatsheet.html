@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>HTML Cheatsheet</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="css/cheatsheet.css">
+</head>
+<body>
+	<!-- navbar -->
+	<div id="navbar">
+		<div id="navbarElement" class="home" onclick="document.location='index.html'">Home</div>
+		<div id="navbarElement" class="html" onclick="document.location='cheatsheet.html'">HTML Cheatsheet</div>
+		<div id="navbarElement" class="css" onclick="document.location='css.html'">CSS Cheatsheet</div>
+		<div id="navbarElement" class="java" onclick="document.location='java.html'">Javascript Cheatsheet</div>
+	</div>
+	<!-- main page content -->
+	<div id="mainBody">
+		<!-- tag list -->
+		<div id="tagList">
+			<h1 id="sectionHeader">A Catalog of Common HTML Tags</h1><br>
+			
+			<h2 id="sectionSubHeader">Common Text Tags</h2>
+			<p>&lt;p&gt; Paragraph Tag</p>
+			<b>&lt;b&gt; Bold Tag (equivalent to &lt;strong&gt; Strong Tag)</b><br>
+			<i>&lt;i&gt; Italic Tag (equivalent to &lt;em&gt; Emphasis Tag)</i><br>
+			<p>(The reason why you would use Strong and Emphasis tags over bold and italic ones is if you want to include certain text into the page's metadata, usually for affecting how it's detected by search engines. Is also utilized by screen readers.)</p>
+			<strike>&lt;strike&gt; Strikethrough Tag</strike><br>
+			<p>&lt;br&gt; Line Break Tag (Inserts a line break)</p>
+			
+			<!-- heading tags -->
+			<h2 id="sectionSubHeader">Heading Tags</h2>
+			<div id="headingTags">
+				<br>
+				<h1>&lt;h1&gt; Heading 1 Tag</h1><br>
+				<h2>&lt;h2&gt; Heading 2 Tag</h2><br>
+				<h3>&lt;h3&gt; Heading 3 Tag</h3><br>
+				<h4>&lt;h4&gt; Heading 4 Tag</h4><br>
+				<h5>&lt;h5&gt; Heading 5 Tag</h5><br>
+				<h6>&lt;h6&gt; Heading 6 Tag</h6><br>
+				<p>(Each tag defaults to a certain size and uses a serif font)</p><br>
+			</div>
+			
+			<!-- lists -->
+			<h2 id="sectionSubHeader">Organization Tags</h2>
+			<div id="divTag">&lt;div&gt; Div Tag (css styling used to visualize)</div>
+			<p>&lt;ul&gt; Unordered List (used with &lt;li&gt; list tags)</p>
+			<ul>
+				<li>Unordered List Item 1</li>
+				<li>Unordered List Item 2</li>
+				<li>Unordered List Item 3</li>
+			</ul>
+			<p>&lt;ol&gt; Ordered List (used with &lt;li&gt; list tags)</p>
+			<ol>
+				<li>Ordered list item 1</li>
+				<li>Ordered list item 2</li>
+				<li>Ordered list item 3</li>
+			</ol>
+			
+			<!-- table tag display -->
+			<div id="tableTags">
+			<p>&lt;table&gt; Table tag (used with &lt;tr&gt; Table Row Tag, &lt;th&gt; Table Header Tag, &lt;td&gt; Table Data Tag, &lt;thead&gt; Table Head Tag, &lt;tbody&gt; Table Body Tag, &lt;tfoot&gt; Table Footer Tags)</p>
+				<table>
+					<thead>
+						<tr>
+							<th>&lt;th&gt;Table header Element nested within a &lt;tr&gt; Table Row Element nested within a &lt;thead&gt; Table Head Tag</th>
+							<th>table head data 2</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>&lt;td&gt;Table Data Element nested within a &lt;tr&gt; Table Row Element nested within a &lt;tbody&gt; Table Body Tag</td>
+							<td>table body data 2</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>&lt;td&gt;Table Data Element nested within a &lt;tr&gt; Table Row Element nested within a &lt;tfoot&gt; Table Footer Tag</td>
+							<td>table footer data 2</td>
+						</tr>
+					</tfoot>
+				</table>
+				
+				<!-- user input form examples -->
+				<h2 id="sectionSubHeader">User Input Examples</h2>
+				<p>&lt;button&gt; Button Tag<br>
+					(Used for basic user input)
+				</p>
+				<button onclick="alert('You have clicked the button')">This is a button</button>
+				<p>&lt;input&gt; Input Tag<br>
+					(Defaults to single-line user text input. The type property determines the kind of input element it is)
+				</p>
+				<input>
+				<p>&lt;textarea&gt; Textarea Tag<br>
+					(Used for multi-line user text input. Default size can be adjusted using rows and cols properties.)
+				</p>
+				<textarea rows="4" cols="40">This textarea element has 4 rows and 40 columns</textarea>
+				<p>&lt;input type="range"&gt; Range Input Tag<br>
+					(Creates a slider which can have its value adjusted by the user, minimum and maximum values can be set in the element's properties via its HTML tag or through Javascript)
+				</p>
+				<input type="range" min=0 max=100>
+				<h2 id="sectionSubHeader">Email Form Example</h2>
+				<form action="mailto:luismarlousy@gmail.com" method="post" enctype="text/plain">
+					<label for="yourName">Please Enter Your Name:</label>
+					<input type="" name="yourName" value=""><br>
+					<label for="yourEmail">Please Enter Your e-mail:</label>
+					<input type="email" name="yourEmail" value=""><br>
+					<label for="">Please Enter Your Message in Brief:</label><br>
+					<textarea name="yourMessage" rows="8" cols="40"></textarea><br>
+					<input type="submit" name="" value="Send">
+				</form>
+				
+			</div>
+			
+		</div>
+		
+		<!-- useful links section -->
+		<div id="links">
+			<h1 id="sectionHeader">Useful Links</h1>
+			<div style="font-size: 1.25em;">
+				<p>W3Schools HTML Tag Reference: <a href="https://www.w3schools.com/tags/default.asp">https://www.w3schools.com/tags/default.asp</a></p>
+				<p>MDN HTML Tag Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a></p>
+				<p></p>
+			</div>
+			
+		</div>
+	
+</body>
+</html>

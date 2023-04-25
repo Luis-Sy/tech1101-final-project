@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>CSS Cheatsheet</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="css/cssSheet.css">
+</head>
+<body>
+	<!-- navbar -->
+	<div id="navbar">
+		<div id="navbarElement" class="home" onclick="document.location='index.html'">Home</div>
+		<div id="navbarElement" class="html" onclick="document.location='cheatsheet.html'">HTML Cheatsheet</div>
+		<div id="navbarElement" class="css" onclick="document.location='css.html'">CSS Cheatsheet</div>
+		<div id="navbarElement" class="java" onclick="document.location='java.html'">Javascript Cheatsheet</div>
+	</div>
+	<!-- main page content -->
+	<div id="mainBody">
+		<div id="properties">
+			<h1 id="sectionHeader">Common CSS Properties</h1><br>
+			<h2 id="sectionSubHeader">Spacing</h2>
+			<p>Margin (Space between elements)<br>
+				(Can be adjusted for each individual side: margin-top, margin-bottom, margin-left, margin-right)
+			</p>
+			<!-- flex container so the elements are displayed side by side horizontally rather than vertically -->
+			<div id="flexContainer">
+				<div id="margin">Div 1</div>
+				<div id="margin">Div 2</div>
+			</div>
+			
+			<p>Padding (Space inside elements)<br>
+				(Can be adjusted for each individual side: padding-top, padding-bottom, padding-left, padding-right)
+			</p>
+			<div id="flexContainer">
+				<div id="padding">Div 1</div>
+				<div id="padding">Div 2</div>
+			</div>
+			<h2 id="sectionSubHeader">Sizing</h2>
+			<p>Width</p>
+			<div id="flexContainer" class="widthDisplay">
+				<div id="width1">Div 1</div>
+				<div id="width2">Div 2</div>
+				<div id="width3">Div 3</div>
+			</div>
+			<p>Height</p>
+			<div id="flexContainer" class="heightDisplay">
+				<div id="height1">Div 1</div>
+				<div id="height2">Div 2</div>
+				<div id="height3">Div 3</div>
+			</div>
+			
+			<!-- text formatting section -->
+			<h2 id="sectionSubHeader">Text Formatting</h2>
+			<p>Font-Size<br>
+				(Dictates size of text in an element. Usable units: px, pt, em, %)
+			</p>
+			<div id="flexContainer" class="fontSize" style="flex-direction: column">
+				<p id="fSize1">36px</p>
+				<p id="fSize2">8em</p>
+				<p id="fSize3">1000%</p>
+			</div>
+			<p>Text-Decoration<br>
+				(Affects the color, underline and overline, underline and overline appearance, and underline and overline thickness)
+			</p>
+			<div id="flexContainer" class="textDecorationDisplay" style="flex-direction: column;">
+				<p style="text-decoration: underline;">Underline</p>
+				<p style="text-decoration: overline;">Overline</p>
+				<p style="text-decoration: underline overline;">Underline and Overline</p>
+				<p style="text-decoration: underline blue wavy;">Wavy Blue Underline</p>
+				<p style="text-decoration: overline yellow dotted 6px;">Dotted Yellow 6px Overline</p>
+				<p style="text-decoration: underline solid red 4px;">Solid Red 4px Underline</p>
+			</div>
+			<p>Color<br>
+				(Dictates a font's color inside an element. Can use preset color names[Red, Orange, Purple, etc.], RGB rgb(Red, Green, Blue), RGBA rgba(Red, Green, Blue, Alpha), and Hex color codes)
+			</p>
+			<div id="flexContainer" class="fontColor" style="flex-direction: column">
+				<p style="font-size: 3em; color: red;">Red</p>
+				<p style="font-size: 3em; color: rgb(123, 18, 38);">rgb(123, 18, 38)</p>
+				<p style="font-size: 3em; color: rgba(12, 5, 128, 0.4);">rgba(12, 5, 128, 0.4)</p>
+				<p style="font-size: 3em; color: #6214b4;">#6214b4</p>
+			</div>
+			<p>Text-Align<br>
+				(Dictates how text is horizontally aligned in an element)
+			</p>
+			<div id="flexContainer" class="textAlign" style="flex-direction: column">
+				<p style="text-align: left;">text-align: left</p>
+				<p style="text-align: right;">text-align: right</p>
+				<p style="text-align: center;">text-align: center</p>
+				<p style="text-align: justify;">text-align: justify</p>
+			</div>
+			<p>Vertical-Align<br>
+				(Dictates how elements and text is vertically aligned in an element)
+			</p>
+			<div id="flexContainer" class="verticalAlign" style="flex-direction: column">
+				<p style="height: 4em;">Sample<span style="vertical-align: baseline; font-size: 1.5em;">vertical-align: baseline</span>Text</p>
+				<p style="height: 4em;">Sample<span style="vertical-align: text-top; font-size: 1.5em;">vertical-align: text-top</span>Text</p>
+				<p style="height: 4em;">Sample<span style="vertical-align: text-bottom; font-size: 1.5em;">vertical-align: text-bottom</span>Text</p>
+				<p style="padding: 10px; border: solid black 2px">Sample<span style="vertical-align: sub;">vertical-align: sub</span>Text</p>
+				<p style="padding: 10px; border: solid black 2px">Sample<span style="vertical-align: super;">vertical-align: super</span>Text</p>
+			</div>
+			<p>Text-Transform<br>
+				(Changes all text contained in the element)
+			</p>
+			<div id="flexContainer" class="textTransform" style="flex-direction: column">
+				<p style="text-transform: lowercase;">text-transform: lowercase</p>
+				<p style="text-transform: uppercase;">text-transform: uppercase</p>
+				<p style="text-transform: capitalize;">text-transform: capitalize</p>
+			</div>
+			
+			<!-- flexbox demonstrations -->
+			<h2 id="sectionSubHeader">Flexbox</h2>
+			<p>(Used for positioning elements on a page that allows for layout retention when the page is scaled)<br>
+				In order to use flexbox, a container with the flex property needs to be defined first, all elements inside the container will then be subject to flexbox positioning.
+			</p><br>
+			<div id="flexContainer" style="flex-direction: column">
+				<p>Flex Direction (defaults to row)<br>
+				<br>
+					Row</p>
+				<div id="flexContainer" class="flexDisplay" style="flex-direction: row">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+				</div>
+				<p>Column</p>
+				<div id="flexContainer" class="flexDisplay" style="flex-direction: column">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+				</div>
+				<p>Row-Reverse</p>
+				<div id="flexContainer" class="flexDisplay" style="flex-direction: row-reverse">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+				</div>
+				<p>Column-Reverse</p>
+				<div id="flexContainer" class="flexDisplay" style="flex-direction: column-reverse">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+				</div>
+			</div>
+			<br>
+			<!-- pseudo classes -->
+			<h2 id="sectionSubHeader">Pseudo Classes</h2>
+			<br>
+			<p>:hover<br>
+				Triggers if the cursor hovers over the element
+			</p><br>
+			<p>This div changes color if hovered over</p><br>
+			<div id="hoverDisplay"></div>
+			<br>
+			<p>:focus<br>
+				Triggers if the element is focused on
+			</p><br>
+			<p>This input element is a textbox that can be interacted with and focused on</p><br>
+			<input type="text"id="focusDisplay"></input>
+			
+		</div>
+		<div id="links" >
+			<br>
+			<h1 id="sectionHeader">Useful Links</h1><br>
+			<div style="font-size: 1.25em;">
+				<p>Simple CSS background generator: <a href="https://www.magicpattern.design/tools/css-backgrounds">https://www.magicpattern.design/tools/css-backgrounds</a></p>
+				<p>Google Fonts: <a href="https://fonts.google.com/">https://fonts.google.com/</a></p>
+				<p>Color Palettes: <a href="https://palettes.shecodes.io/">https://palettes.shecodes.io/</a></p>
+				<p>Flexbox Guide: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+				<p>CSS Button Generator: <a href="https://css3buttongenerator.com/">https://css3buttongenerator.com/</a></p>
+			</div>
+			
+		</div>
+	</div>
+	
+</body>
+</html>

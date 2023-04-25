@@ -1,0 +1,74 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background-color: #224710;
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #224710 10px ), repeating-linear-gradient( #32c52e55, #32c52e );
+}
+
+#mainBody{
+	display: flex;
+	flex: 60%;
+	flex-direction: column;
+	margin-top: 100px;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-bottom: 20px;
+	background-color: rgba(255,255,255,0.8);
+	padding: 40px;
+}
+#sectionHeader, #sectionSubHeader{
+	font-family: 'Bebas Neue', cursive;
+}
+
+#sectionHeader{
+	font-size: 3em;
+}
+
+#sectionSubHeader{
+	font-size: 2em;
+}
+
+/* list of tags styling */
+#tagList * {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#headingTags {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-style: solid;
+	border-right-style: none;
+	border-left-style: none;
+	border-width: 3px;
+}
+#headingTags *{ /* elements inside headingTags div */
+	margin-top: 0;
+	margin-bottom: 0;
+}
+#divTag{ /* div tag entry display */
+	background-color: cyan;
+	padding: 5px;
+	max-width: 400px;
+	max-height: 100px;
+	min-width: 200px;
+	min-height: 50px;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+li { /* for unordered and ordered list tag display */
+	margin-left: 50px;
+}
+/* table tag displays */
+
+#tableTags {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+table, table *{
+	border: 2px solid;
+	padding: 5px;
+}

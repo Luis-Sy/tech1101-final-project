@@ -1,0 +1,37 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background-color: #224710;
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #224710 10px ), repeating-linear-gradient( #32c52e55, #32c52e );
+}
+
+#mainBody{
+	display: flex;
+	flex: 60%;
+	flex-direction: column;
+	margin-top: 100px;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-bottom: 20px;
+	background-color: rgba(255,255,255,0.8);
+	padding: 40px;
+}
+
+#sectionHeader, #sectionSubHeader{
+	font-family: 'Bebas Neue', cursive;
+}
+
+#sectionHeader{
+	font-size: 3em;
+}
+
+#sectionSubHeader{
+	font-size: 2em;
+}
+p {
+	font-size: 20px;
+}
